@@ -32,15 +32,14 @@ module.exports = {
         })
       },
       { 
-        test: /\.js$/, 
+        test: /\.(js|jsx)$/, 
         loader: 'babel-loader', 
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        query: {
+          presets: ['react', 'es2015'],
+          plugins: ['transform-class-properties']
+        }
        },
-      { 
-        test: /\.jsx$/, 
-        loader: 'babel-loader', 
-        exclude: /node_modules/ 
-      },
       { 
         test: /\.png$/, 
         loader: "url-loader?limit=100000" 
