@@ -1,24 +1,36 @@
 import React, { Component } from 'react';
-import { Button, Jumbotron , Grid } from 'react-bootstrap';
-import { voteAngular, voteReact, voteVuejs} from '../actions';
+import { Button, Jumbotron, Grid } from 'react-bootstrap';
+import { voteAngular, voteReact, voteVuejs } from '../actions';
 
-class App extends Component {
-  constructor(props){
+export default class App extends Component {
+  constructor(props) {
     super(props);
     this.store = this.props.store;
+    this.votes = { angular: 1 };
   }
 
-  handleVoteAngular = ()=>{
+  componentWillMount() {
+    console.log("Initial State", this.store.getState());
+  }
+
+  componentWillReceiveProps(newProps) {
+    console.log("New props", newProps.store.getState());
+
+    this.votes = newProps.store.getState();
+  }
+
+  handleVoteAngular = () => {
     this.store.dispatch(voteAngular());
   }
 
-  handleVoteReact = ()=>{
+  handleVoteReact = () => {
     this.store.dispatch(voteReact());
   }
 
-  handleVoteVuejs = ()=>{
+  handleVoteVuejs = () => {
     this.store.dispatch(voteVuejs());
   }
+
 
   render() {
     return (
@@ -31,12 +43,13 @@ class App extends Component {
             </p>
             <p>
               <Button bsStyle="danger" onClick={this.handleVoteAngular}>Angular</Button>
+              <span>{this.votes.angular}</span>
             </p>
             <p>
               <Button bsStyle="primary" onClick={this.handleVoteReact}>React</Button>
             </p>
             <p>
-              <Button bsStyle="send" onClick={this.handleVoteVuejs}>Vue</Button>
+              <Button bsStyle="success" onClick={this.handleVoteVuejs}>Vue</Button>
             </p>
           </Jumbotron>
 
@@ -48,5 +61,3 @@ class App extends Component {
       </div>);
   }
 }
-
-export default  App;
