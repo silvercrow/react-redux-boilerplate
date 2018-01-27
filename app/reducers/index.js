@@ -1,9 +1,11 @@
+//the initial app state
 const initialState = {
   angular: 0,
   react: 0,
   vuejs: 0
 }
 
+//our App reducer
 export default (state = initialState, action) => {
   switch (action.type) {
     case "VOTE_ANGULAR":
@@ -12,7 +14,7 @@ export default (state = initialState, action) => {
         angular: state.angular + 1
       })
       break;
-    default:
+    
     case "VOTE_REACT":
       console.log("vote react");
       return Object.assign({}, state, {
@@ -26,6 +28,7 @@ export default (state = initialState, action) => {
       })
       break;
       return state;
+      default:
       break;
   }
   return state;

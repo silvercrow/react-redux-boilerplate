@@ -6,17 +6,6 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.store = this.props.store;
-    this.votes = { angular: 1 };
-  }
-
-  componentWillMount() {
-    console.log("Initial State", this.store.getState());
-  }
-
-  componentWillReceiveProps(newProps) {
-    console.log("New props", newProps.store.getState());
-
-    this.votes = newProps.store.getState();
   }
 
   handleVoteAngular = () => {
@@ -31,6 +20,28 @@ export default class App extends Component {
     this.store.dispatch(voteVuejs());
   }
 
+  getVotes =(type) =>{
+    if(this.store.getState()){
+      switch (type) {
+        case "angular":
+        return this.store.getState().angular;
+          break;
+        case "react":
+        return this.store.getState().react;
+          break;
+        case "vuejs":
+        return this.store.getState().vuejs;
+          break;
+      
+        default:
+        return ""
+          break;
+      } 
+    }
+  }
+
+
+
 
   render() {
     return (
@@ -43,13 +54,15 @@ export default class App extends Component {
             </p>
             <p>
               <Button bsStyle="danger" onClick={this.handleVoteAngular}>Angular</Button>
-              <span>{this.votes.angular}</span>
+              <span>{this.getVotes("angular")}</span>
             </p>
             <p>
               <Button bsStyle="primary" onClick={this.handleVoteReact}>React</Button>
+              <span>{this.getVotes("react")}</span>
             </p>
             <p>
               <Button bsStyle="success" onClick={this.handleVoteVuejs}>Vue</Button>
+              <span>{this.getVotes("vuejs")}</span>
             </p>
           </Jumbotron>
 

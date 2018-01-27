@@ -1,10 +1,10 @@
 /*
     ./webpack.config.js
 */
-const path = require('path');
-const DashboardPlugin = require('webpack-dashboard/plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const path = require('path'),
+      DashboardPlugin = require('webpack-dashboard/plugin'),
+      HtmlWebpackPlugin = require('html-webpack-plugin'),
+      ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 
 module.exports = {
