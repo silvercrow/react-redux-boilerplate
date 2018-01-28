@@ -40,30 +40,11 @@ module.exports = {
           plugins: ['transform-class-properties']
         }
        },
-      { 
-        test: /\.png$/, 
-        loader: "url-loader?limit=100000" 
-      },
-      { 
-        test: /\.jpg$/, 
-        loader: "file-loader" 
-      },
-      {
-        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, 
-        loader: 'url?limit=10000&mimetype=application/font-woff'
-      },
-      {
-        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, 
-        loader: 'url?limit=10000&mimetype=application/octet-stream'
-      },
-      {
-        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, 
-        loader: 'file'
-      },
-      {
-        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, 
-        loader: 'url?limit=10000&mimetype=image/svg+xml'
-      }
+       {test: /\.(jpe?g|png|gif|svg)$/i, loader: "file-loader?name=/public/icons/[name].[ext]"},
+       {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader?name=public/fonts/[name].[ext]'
+       }
     ]
   },
   plugins: [
@@ -72,7 +53,10 @@ module.exports = {
       filename: 'index.html',
       inject: 'body'
     }),
-    new DashboardPlugin({ port: 8080 }),
+    new DashboardPlugin({ 
+      port: 8080 
+    
+    }),
     new ExtractTextPlugin({
       filename: "[name].[contenthash].css",
       disable: process.env.NODE_ENV === "development"

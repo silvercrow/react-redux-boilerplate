@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Jumbotron, Grid } from 'react-bootstrap';
+import { Button, Badge, Jumbotron, Container} from 'reactstrap';
 import { voteAngular, voteReact, voteVuejs } from '../actions';
+
 
 export default class App extends Component {
   constructor(props) {
@@ -46,31 +47,26 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Grid fluid>
+        <Container>
           <Jumbotron>
             <h1>Hello, world!</h1>
             <p>
               This is a simple Redux app
             </p>
             <p>
-              <Button bsStyle="danger" onClick={this.handleVoteAngular}>Angular</Button>
-              <span>{this.getVotes("angular")}</span>
+              <Button color="danger" onClick={this.handleVoteAngular}>Angular</Button>
+              <Badge>{this.getVotes("angular")}</Badge>
             </p>
             <p>
-              <Button bsStyle="primary" onClick={this.handleVoteReact}>React</Button>
-              <span>{this.getVotes("react")}</span>
+              <Button color="primary" onClick={this.handleVoteReact}>React</Button>
+              <Badge>{this.getVotes("react")}</Badge>
             </p>
             <p>
-              <Button bsStyle="success" onClick={this.handleVoteVuejs}>Vue</Button>
-              <span>{this.getVotes("vuejs")}</span>
+              <Button color="success" onClick={this.handleVoteVuejs}>Vue</Button>
+              <Badge>{this.getVotes("vuejs")}</Badge>
             </p>
           </Jumbotron>
-
-
-
-
-
-        </Grid>
+        </Container>
       </div>);
   }
 }
