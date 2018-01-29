@@ -1,4 +1,4 @@
-React Admin
+React Redux Webpack Boilerplate
 =======================
 React + Webpack + Redux App
 
