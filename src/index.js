@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
-import App from './scenes'
+import App from 'Scenes'
 import 'bootstrap/dist/css/bootstrap.css';
 
 

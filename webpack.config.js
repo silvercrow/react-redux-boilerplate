@@ -54,12 +54,18 @@ module.exports = {
       inject: 'body'
     }),
     new DashboardPlugin({
-      port: 8080
+      port: 3000
 
     }),
     new ExtractTextPlugin({
       filename: "[name].[contenthash].css",
       disable: process.env.NODE_ENV === "development"
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      Scenes: path.resolve(__dirname, 'src/scenes'),
+      Modules: path.resolve(__dirname, 'src/modules')
+    }
+  }
 }
