@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom'
-import HomeContainer from './Home'
-import AboutContainer from './About'
-import NavbarContainer from './Navbar'
+import HomeContainer from 'Scenes/Home'
+import AboutContainer from 'Scenes/About'
+import NavbarContainer from 'Scenes/Navbar'
 
 const App = () => (
   <div>
