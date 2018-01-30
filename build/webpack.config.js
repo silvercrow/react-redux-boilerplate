@@ -64,8 +64,10 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      Scenes: path.resolve(__dirname, 'src/scenes'),
-      Modules: path.resolve(__dirname, 'src/modules')
+      Scenes: path.resolve(__dirname, '../src/scenes'),
+      Reducers: path.resolve(__dirname, '../src/reducers'),
+      Store: path.resolve(__dirname, '../src/store'),
+      DevTools: path.resolve(__dirname, '/dev-tools')
     }
   }
 }

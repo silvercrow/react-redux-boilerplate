@@ -7,7 +7,7 @@ import {
   incrementAsync,
   decrement,
   decrementAsync
-} from '../../modules/counter'
+} from 'Reducers/counter'
 import { Button, Badge, Jumbotron, Container } from 'reactstrap'
 
 const HomeContainer = props => (
