@@ -12,7 +12,10 @@ Start
 -----
 
 ```shell
-$ npm install   # Install Node modules needed to run the app and starts a server at localhost:3000
+$ npm install   # Install Node modules needed to run the app and starts a server at localhost:8080
+
+$ npm install -g flow-bin # Installs flow CLI 
+
 $ npm start     # Development mode 
 ```
 
