@@ -6,7 +6,7 @@ export default class Footer extends React.Component {
       <div>
         <footer className="footer">
           <div className="container">
-            <span className="text-muted">Copyright</span>
+            <span className="text-muted">Footer</span>
           </div>
         </footer>
       </div>
