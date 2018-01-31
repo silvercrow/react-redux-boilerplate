@@ -9,9 +9,10 @@ import {
   decrementAsync
 } from 'Reducers/counter'
 import { Button, Badge, Jumbotron, Container } from 'reactstrap'
-
-const HomeContainer = props => (
+import NavBar from 'Common/components/Navbar'
+const AdminContainer = props => (
   <div>
+    <NavBar/>
     <Container>
       <Jumbotron>
         <h1>Home</h1>
@@ -24,7 +25,7 @@ const HomeContainer = props => (
           <Button color="danger" onClick={props.decrement} disabled={props.isDecrementing}>Decrement</Button>
           <Button color="danger" onClick={props.decrementAsync} disabled={props.isDecrementing}>Decrement Async</Button>
         </p>
-        <p><Button color="success" onClick={() => props.changePage()}>Go to about page via redux</Button></p>
+        
       </Jumbotron>
     </Container>
   </div>
@@ -41,10 +42,9 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   incrementAsync,
   decrement,
   decrementAsync,
-  changePage: () => push('/about-us')
 }, dispatch)
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(HomeContainer)
+)(AdminContainer)

@@ -19,9 +19,4 @@ render(
 )
 
 
-if (process.env.NODE_ENV !== 'production') {
-  const showDevTools = require('DevTools/showDevTools');
-  showDevTools(store);
-}
-
 

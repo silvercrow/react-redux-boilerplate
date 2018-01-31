@@ -71,7 +71,8 @@ module.exports = {
       Scenes: path.resolve(__dirname, '../src/scenes'),
       Reducers: path.resolve(__dirname, '../src/reducers'),
       Store: path.resolve(__dirname, '../src/store'),
-      DevTools: path.resolve(__dirname, '../build/dev-tools')
+      DevTools: path.resolve(__dirname, '../build/dev-tools'),
+      Common: path.resolve(__dirname, '../src/common')
     }
   }
 }

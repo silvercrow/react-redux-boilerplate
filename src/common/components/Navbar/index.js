@@ -22,10 +22,10 @@ const NavbarContainer = props => (
       <Collapse navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink href="/components/">Components</NavLink>
+            <NavLink href="/">Login</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+            <NavLink href="/admin">Admin</NavLink>
           </NavItem>
         </Nav>
       </Collapse>

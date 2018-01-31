@@ -1,22 +1,15 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom'
-import HomeContainer from 'Scenes/Home'
-import AboutContainer from 'Scenes/About'
-import NavbarContainer from 'Scenes/Navbar'
+import Template from 'Common/components/Template'
+import LoginContainer from 'Scenes/Login'
+import AdminContainer from 'Scenes/Admin'
+
 
 const App = () => (
-  <div>
-    <header>
-      <Link to="/">Home</Link>
-      <Link to="/about-us">About</Link>
-    </header>
-
-
-    <main>
-      <Route exact path="/" component={HomeContainer} />
-      <Route exact path="/about-us" component={AboutContainer} />
-    </main>
-  </div>
+  <Template>
+      <Route exact path="/" component={LoginContainer} />
+      <Route exact path="/admin" component={AdminContainer} />
+  </Template>
 )
 
 export default App
