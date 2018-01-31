@@ -12,7 +12,7 @@ import { Button, Badge, Jumbotron, Container } from 'reactstrap'
 import NavBar from 'Common/components/Navbar'
 const AdminContainer = props => (
   <div>
-    <NavBar/>
+    <NavBar />
     <Container>
       <Jumbotron>
         <h1>Home</h1>
@@ -25,7 +25,7 @@ const AdminContainer = props => (
           <Button color="danger" onClick={props.decrement} disabled={props.isDecrementing}>Decrement</Button>
           <Button color="danger" onClick={props.decrementAsync} disabled={props.isDecrementing}>Decrement Async</Button>
         </p>
-        
+
       </Jumbotron>
     </Container>
   </div>

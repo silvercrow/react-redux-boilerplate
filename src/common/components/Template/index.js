@@ -7,10 +7,8 @@ export default class Template extends React.Component {
     return (
       <div>
         <Header />
-          <div className="container">
-          {this.props.children}
-          </div>
-        <Footer/>
+        {this.props.children}
+        <Footer />
       </div>
     )
   }

@@ -2,7 +2,7 @@
     ./webpack.config.js
 */
 const path = require('path'),
-  webpack = require('webpack'), 
+  webpack = require('webpack'),
   DashboardPlugin = require('webpack-dashboard/plugin'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -72,7 +72,8 @@ module.exports = {
       Reducers: path.resolve(__dirname, '../src/reducers'),
       Store: path.resolve(__dirname, '../src/store'),
       DevTools: path.resolve(__dirname, '../build/dev-tools'),
-      Common: path.resolve(__dirname, '../src/common')
+      Common: path.resolve(__dirname, '../src/common'),
+      Styles: path.resolve(__dirname, '../src/styles')
     }
   }
 }
