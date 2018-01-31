@@ -5,17 +5,14 @@ import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from 'Store'
 import App from 'Scenes'
 import 'bootstrap/dist/css/bootstrap.css';
-
-import DevTools from 'DevTools';
-
+import DevToolsBox from "DevTools/DevToolsBox"
 
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <div>
+      <DevToolsBox>
         <App />
-        <DevTools />
-      </div>
+      </DevToolsBox>
     </ConnectedRouter>
   </Provider>,
   document.querySelector('#app')
@@ -26,3 +23,5 @@ if (process.env.NODE_ENV !== 'production') {
   const showDevTools = require('DevTools/showDevTools');
   showDevTools(store);
 }
+
+
