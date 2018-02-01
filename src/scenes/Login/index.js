@@ -11,7 +11,7 @@ const LoginContainer = props => (
       <form>
         <Input type="text" placeholder="Username"/>
         <Input type="password" placeholder="Password"/>
-        <Button>Login</Button>
+        <Button onClick={() => props.changePage()} >Login</Button>
       </form>
     </Container>
   </FormModule>

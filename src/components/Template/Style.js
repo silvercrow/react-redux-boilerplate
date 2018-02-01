@@ -56,7 +56,6 @@ export const Foot = styled.div`
 position:absolute;
 bottom:0;
 width:100%;
-height:60px;   /* Height of the footer */
-background:#6cf;
-background-color: #0B557D;
+height:60px; 
+background:#083B57;
 `;
