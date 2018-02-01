@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom'
-import Template from 'Common/components/Template'
+import Template from 'Components/Template'
 import LoginContainer from 'Scenes/Login'
 import AdminContainer from 'Scenes/Admin'
 

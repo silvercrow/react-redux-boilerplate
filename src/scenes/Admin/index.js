@@ -9,7 +9,7 @@ import {
   decrementAsync
 } from 'Reducers/counter'
 import { Button, Badge, Jumbotron, Container } from 'reactstrap'
-import NavBar from 'Common/components/Navbar'
+import NavBar from 'Components/Navbar'
 const AdminContainer = props => (
   <div>
     <NavBar />

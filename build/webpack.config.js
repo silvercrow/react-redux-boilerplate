@@ -41,7 +41,10 @@ module.exports = {
           plugins: ['transform-class-properties']
         }
       },
-      { test: /\.(jpe?g|png|gif|svg)$/i, loader: "file-loader?name=/public/icons/[name].[ext]" },
+      { 
+        test: /\.(jpg|png|gif)$/,
+        loaders: ['file'] 
+      },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         loader: 'file-loader?name=public/fonts/[name].[ext]'
@@ -72,8 +75,9 @@ module.exports = {
       Reducers: path.resolve(__dirname, '../src/reducers'),
       Store: path.resolve(__dirname, '../src/store'),
       DevTools: path.resolve(__dirname, '../build/dev-tools'),
-      Common: path.resolve(__dirname, '../src/common'),
-      Styles: path.resolve(__dirname, '../src/styles')
+      Components: path.resolve(__dirname, '../src/components'),
+      Styles: path.resolve(__dirname, '../src/assets/styles'),
+      Images: path.resolve(__dirname, '../src/assets/images')
     }
   }
 }

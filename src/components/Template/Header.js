@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import logoImage from 'Images/logo.svg';
+
 
 const HeaderBar = styled.header`
   height: 70px;
@@ -15,18 +17,26 @@ const Logo = styled.section`
   padding-top:10px;
 `;
 
+const Container = styled.section`
+float: left;
+height: 70px;
+color: #FFF;
+padding-top:10px;
+`;
+
 export default class Header extends React.Component {
   render() {
     return (
       <div>
         <HeaderBar>
-          <div className="container">
+
             <a href="/">
               <Logo>
-                <img src="//static.usedcars.com/img/logo/logo.svg" alt="UsedCars.com logo" />
+                <img src={logoImage} alt="UsedCars.com logo"/>
               </Logo>
             </a>
-          </div>
+
+            
         </HeaderBar>
       </div>
     )
