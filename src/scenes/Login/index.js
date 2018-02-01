@@ -11,10 +11,8 @@ import {
   FormText
 } from 'reactstrap';
 
-import 'Styles/login.css';
-
 const LoginContainer = props => (
-  <div className="login-body">
+  <div>
     <Form className="form-signin">
       <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
       <Input className="form-control" type="input" name="email" id="exampleEmail" placeholder="username" />

@@ -1,15 +1,13 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom'
-import Template from 'Components/Template'
 import LoginContainer from 'Scenes/Login'
 import AdminContainer from 'Scenes/Admin'
 
-
 const App = () => (
-  <Template>
+  <div>
       <Route exact path="/" component={LoginContainer} />
       <Route exact path="/admin" component={AdminContainer} />
-  </Template>
+  </div>
 )
 
 export default App

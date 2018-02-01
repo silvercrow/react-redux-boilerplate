@@ -1,11 +1,12 @@
 import React from 'react';
+import Template from 'Components/Template'
 
 export default class DevToolsBox extends React.Component {
   render() {
     return (
-      <div>
+      <Template>
         {this.props.children}
-      </div>
+      </Template>
     )
   }
 }

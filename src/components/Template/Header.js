@@ -1,44 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
 import logoImage from 'Images/logo.svg';
-
-
-const HeaderBar = styled.header`
-  height: 70px;
-  background-color: #0B557D;
-  border-bottom: 1px solid #C0FF00;
-  z-index: 500;
-`;
-
-const Logo = styled.section`
-  float: left;
-  height: 70px;
-  color: #FFF;
-  padding-top:10px;
-`;
-
-const Container = styled.section`
-float: left;
-height: 70px;
-color: #FFF;
-padding-top:10px;
-`;
+import {HeaderBar , Container, Logo } from 'Components/Template/Style.js';
 
 export default class Header extends React.Component {
   render() {
     return (
-      <div>
         <HeaderBar>
-
+          <Container>
             <a href="/">
               <Logo>
                 <img src={logoImage} alt="UsedCars.com logo"/>
               </Logo>
             </a>
-
-            
+          </Container>
         </HeaderBar>
-      </div>
     )
   }
 }
