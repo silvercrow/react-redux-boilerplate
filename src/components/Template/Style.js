@@ -42,7 +42,7 @@ text-align: center;}
 `;
 
 export const Body = styled.div`
-background:#fff;
+background:#ECEEF0;
 `;
 export const Wrapper = styled.div`
 min-height:100%;

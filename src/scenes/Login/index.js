@@ -2,28 +2,19 @@ import React from 'react'
 import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import {
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  FormText
-} from 'reactstrap';
+import { FormModule, Container, H2, Input, Button } from './Style'
 
 const LoginContainer = props => (
-  <div>
-    <Form className="form-signin">
-      <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <Input className="form-control" type="input" name="email" id="exampleEmail" placeholder="username" />
-      <Input className="form-control"
-        type="password"
-        name="password"
-        id="examplePassword"
-        placeholder="password" />
-      <Button className="btn btn-lg btn-primary btn-block" onClick={() => props.changePage()}>Login</Button>
-    </Form>
-  </div>
+  <FormModule>
+    <Container>
+      <H2>Login to your account</H2>
+      <form>
+        <Input type="text" placeholder="Username"/>
+        <Input type="password" placeholder="Password"/>
+        <Button>Login</Button>
+      </form>
+    </Container>
+  </FormModule>
 )
 
 const mapStateToProps = state => ({ count: state.counter.count, isIncrementing: state.counter.isIncrementing, isDecrementing: state.counter.isDecrementing })

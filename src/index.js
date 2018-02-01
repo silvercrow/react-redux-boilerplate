@@ -5,6 +5,7 @@ import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from 'Store'
 import App from 'Scenes'
 import 'bootstrap/dist/css/bootstrap.css';
+import 'Styles/base.css'
 import DevToolsBox from "DevTools/DevToolsBox"
 
 render(
